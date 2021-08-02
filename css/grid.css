@@ -1,0 +1,128 @@
+ body {
+        margin: 0px;
+        font-family: Lekton;
+        background-color: #FFFbe6;
+      }
+      
+      h1, h3 {
+      	color:#FFFbe6;
+        text-align: center;
+      }
+      
+      h1 {
+      	font-size: 1.5em;
+    	margin-bottom: 10px;
+      }
+      
+      h3 {
+      	font-size: .8em;
+      }
+      
+      button {
+      	font-family: Lekton;
+      }
+
+      .gridContainer {
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-rows: 1fr 6fr 1fr 10vh;
+        height: 110vh;
+      }
+
+      .first-section {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        background-color: #356859;
+        box-shadow: 0px 2px 2px 0px #a5a3a382;
+      }
+
+      .footer {
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        background-color: rgba(241,245, 223, 1);
+        box-shadow: -2px 0px 2px 0px #a5a3a382;
+      }
+
+      .sidenav {
+        grid-row-start: 2;
+        grid-row-end: 4;
+        background-color: #b9e4c9;
+        padding: 5px;
+      }
+
+      .left {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        box-shadow: 2px 0px 2px 0px #a5a3a382;
+      }
+
+      .right {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        box-shadow: -2px 0px 2px 0px #a5a3a382;
+      }
+
+      .mainContent {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        padding: 10px;
+        overflow-y: auto;
+      }
+      
+      .card {
+      	margin-bottom: 20px;
+        background-color: rgba(241,245, 223, 1);
+        padding: 5px;
+        box-shadow: 2px 2px 2px 0px #a5a3a382;
+        border: 1px solid #a5a3a382;
+        border-radius: 5px;
+        position: relative;
+        z-index: -1;
+      }
+      
+      .card img {
+      	float: left;
+        margin-right: 10px;
+        border-radius: 5px;
+        width: 40%;
+        max-height: 133px;
+        max-width: 200px;
+      }
+      
+      .card.img-card {
+      	min-height: 140px;
+      }
+      
+      a {
+      	display: block;
+      }
+      
+      @media only screen and (max-width: 600px) {
+        body {
+          background-color: #FFFbe6;
+        }
+        
+        .mainContent {
+           grid-row-end: 3;
+           grid-column-start: 1;
+           grid-column-end: 4;
+        }
+        
+        .sidenav {
+          grid-column-start: 1;
+          grid-column-end: 4;
+          grid-row-start: 3;
+          grid-row-end: 4;
+          box-shadow: 0px -2px 2px 0px #a5a3a382;
+        }
+        
+        .right {
+        	display: none;
+        }      
+      }
