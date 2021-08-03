@@ -96,6 +96,11 @@ body {
         max-height: 133px;
         max-width: 200px;
       }
+
+      .card img {
+        border-radius: 5px;
+        width: 60%;     
+      }
       
       .card.img-card {
       	min-height: 140px;
