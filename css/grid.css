@@ -88,7 +88,7 @@ body {
         z-index: -1;
       }
       
-      .card img {
+      .img-card img {
       	float: left;
         margin-right: 10px;
         border-radius: 5px;
