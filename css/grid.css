@@ -1,11 +1,12 @@
- body {
+body {
         margin: 0px;
         font-family: Lekton;
         background-color: #FFFbe6;
       }
       
       h1, h3 {
-      	color:#FFFbe6;
+      	/*color:#FFFbe6;*/
+        color: #FD5523;
         text-align: center;
       }
       
@@ -24,14 +25,14 @@
 
       .gridContainer {
         display: grid;
-        grid-template-columns: 1fr 4fr 1fr;
-        grid-template-rows: 1fr 6fr 1fr 10vh;
+        grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+        grid-template-rows: 50px 50px 6fr 1fr 10vh;
         height: 110vh;
       }
 
       .first-section {
         grid-column-start: 1;
-        grid-column-end: 4;
+        grid-column-end: 6;
         grid-row-start: 1;
         grid-row-end: 2;
         background-color: #356859;
@@ -41,15 +42,15 @@
       .footer {
         grid-column-start: 1;
         grid-column-end: 6;
-        grid-row-start: 4;
-        grid-row-end: 5;
+        grid-row-start: 5;
+        grid-row-end: 6;
         background-color: rgba(241,245, 223, 1);
         box-shadow: -2px 0px 2px 0px #a5a3a382;
       }
 
       .sidenav {
         grid-row-start: 2;
-        grid-row-end: 4;
+        grid-row-end: 5;
         background-color: #b9e4c9;
         padding: 5px;
       }
@@ -68,11 +69,12 @@
 
       .mainContent {
         grid-column-start: 2;
-        grid-column-end: 3;
+        grid-column-end: 6;
         grid-row-start: 2;
-        grid-row-end: 4;
+        grid-row-end: 5;
         padding: 10px;
         overflow-y: auto;
+        padding-top: 65px;
       }
       
       .card {
@@ -101,6 +103,29 @@
       
       a {
       	display: block;
+        color: #FD5523;
+        text-decoration: none;
+      }
+      
+      a:hover {
+        text-decoration: underline;
+      }
+      
+      .hover-card {
+      	grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        background-color: rgba(241,245, 223, 1);
+        box-shadow: 0px 2px 2px 2px #a5a3a382;
+      }
+      
+      .first-section h1,.first-section h3 {
+       	display: none;
+      }
+      
+      .footer p {
+      	text-align: center;
       }
       
       @media only screen and (max-width: 600px) {
@@ -109,20 +134,32 @@
         }
         
         .mainContent {
-           grid-row-end: 3;
+           grid-row-end: 4;
            grid-column-start: 1;
-           grid-column-end: 4;
+           grid-column-end: 6;
         }
         
         .sidenav {
           grid-column-start: 1;
-          grid-column-end: 4;
-          grid-row-start: 3;
-          grid-row-end: 4;
+          grid-column-end: 6;
+          grid-row-start: 4;
+          grid-row-end: 6;
           box-shadow: 0px -2px 2px 0px #a5a3a382;
         }
         
         .right {
         	display: none;
-        }      
+        }
+        a {
+        	display: inline;
+        }
+        .first-section h1,.first-section h3 {
+          display: inherit;
+        }
+        .hover-card {
+        	display: none;
+        }
+        .first-section {
+        	grid-row-end: 3;
+        }
       }
