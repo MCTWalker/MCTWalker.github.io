@@ -1,0 +1,11 @@
+#div1 {
+    background-color: blue;
+}
+
+div {
+    height: 40px;
+    width: 40px;
+    background-color: pink;
+    margin-bottom: 5px;
+    display: inline-block;
+}
