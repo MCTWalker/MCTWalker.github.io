@@ -37,15 +37,11 @@ h1 {
     box-shadow: 5px 0px 2px 0px #5a5a5a6b
 }
 
-.right {
-    box-shadow: -5px 0px 2px 0px #5a5a5a6b;
-}
-
 #main-content {
     text-align: center;
     padding: 20px;
     grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 4;
     overflow: auto;
@@ -76,6 +72,10 @@ h1 {
 
 .firstImg {
     float: right;
+}
+
+.imgCard {
+    min-height: 290px;
 }
 
 @media only screen and (max-width: 600px) {
