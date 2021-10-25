@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function handleDiv() {
+        let el = document.getElementById('redDiv');
+        let color = el.style.backgroundColor;
+        if (color === "red") {
+          el.style.backgroundColor = "blue";
+        } else {
+          el.style.backgroundColor = "red";
+        }
+      }
+    </script>
+  </head>
+  <body>
+
+    <!--Assignment details are written in comments next to the elements you need to do stuff with-->
+
+    <h1 id="firstHeading">Coding Problem</h1>
+    <p>Right now, the button you should do something with does nothing. Edit the code so that the color of the red div below the button toggles back and forth between red and another color each time the button is clicked.</p>
+
+    <br>
+    <button onclick="handleDiv()">Button you should do something with</button> <!--Make the background color of the red div switch back and forth between being red and another color of your choice when this button is clicked-->
+    <br>
+    <br>
+
+    <div id="redDiv" style="background-color:red;width:100px;height:100px"></div><!--Div whose color should change when the "Button you should do something with" is clicked-->
+  </body>
+</html>
