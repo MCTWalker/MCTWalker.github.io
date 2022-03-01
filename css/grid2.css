@@ -1,0 +1,142 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    font-size: 16px;
+}
+
+#hamburgerMenu {
+    float: right;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    fill: white;
+}
+
+a {
+    /*color: #e30425;*/
+    display: block;
+    color: white;
+}
+
+.gridContainer {
+    height: 100%;
+    width: 100%;
+    background-color:cornsilk;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
+}
+
+.header {
+    background-color:#5d1049;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    box-shadow: 0 3px 3px 0 #888888;
+    z-index: 10;
+}
+
+.sidenav {
+    background-color: #f7f3f8;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding: 15px;
+    background-image: url(../images/abstract.jpg);
+}
+
+.left {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    box-shadow: 3px 0 3px 0 #888888;
+    z-index: 5;
+}
+
+.right {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    box-shadow: -3px 0 3px 0 #888888;
+}
+
+.main-content {
+    background-color:white;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding: 13px;
+    overflow: auto;
+}
+
+.footer {
+    background-color:#5d1049;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    box-shadow: 0 -3px 3px 0 #888888;
+    z-index: 6;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+.card {
+    background-color: #f7f3f8;
+    box-shadow: 0 3px 6px 4px #d9d8d8;
+    padding: 7px;
+    border-radius: 5px;
+    min-height: 150px; /* Make sure minimum height is at least as tall as img tags */
+    margin-bottom: 20px;
+}
+
+img {
+    float: left;
+    height: 150px;
+    margin-right: 10px;
+}
+
+button {
+    margin-top: 15px;
+    margin-left: 25%;
+    font-size: 1.1em;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        height: 110vh;
+    }
+
+    .gridContainer {
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 5fr 1fr 10vh;
+    }
+
+    .left {
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .gridContainer div {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .footer {
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+}
+
+@media only screen and (max-width: 250px) {
+    img {
+        max-width: 90%;
+        height: auto;
+    }
+}

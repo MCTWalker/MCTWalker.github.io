@@ -1,0 +1,19 @@
+html {
+    font-size: 20px;
+}
+
+div {
+    background-color: red;
+    margin-bottom: 5px;
+}
+
+#div1 {
+    height: 5rem;
+    width: 5rem;
+}
+
+#div2 {
+    height: 5em;
+    width: 5em;
+    font-size: 16px;
+}

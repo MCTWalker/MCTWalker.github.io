@@ -1,57 +1,80 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title></title>
-  <style>
-  html, body {
-    height: 100%;
-    margin: 0;
-  }
-  body {
-    background: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    flex-direction: row;
-  }
-  .gameDiv {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    flex-direction: column;
-    width: 80%;
-  }
-  .linkDiv {
-    height: 100%;
-    width: 20%;
-    border-right: 1px solid white;
-    padding: 0px 20px;
-  }
-  .linkHeading {
-    text-align: center;
-  }
-  a {
-    font-size: 1.5em;
-    color: orange;
-    display: block;
-  }
-  canvas {
-    border: 1px solid white;
-  }
-  </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/grid2.css">
+    <script type="text/javascript">
+        var isPlaying = false;
+        function autoplay(){
+            if (isPlaying) {
+                return;
+            }
+            isPlaying = true;
+            document.getElementById("audio").play();
+        }
+    </script>
 </head>
-<body>
-  <div class="linkDiv">
-    <h1 class="linkHeading">Links to Code</h1>
-    <a href="https://github.com/MCTWalker/MCTWalker.github.io">Class Code</a>
-    <a href="CodingProblemSolved.html">A different link</a>
-  </div>
-  <div class="gameDiv">
-    <h1 class="linkHeading">Snake Game</h1>
-    <canvas width="400" height="400" id="game"></canvas>
-  </div>
-<script src="code/snake.js"></script>
+
+<body onclick="autoplay()">
+    <div class="gridContainer">
+        <div class="header">
+            <h1>Damselfly Designs</h1>
+            <svg id="hamburgerMenu" viewBox="0 0 100 80" width="40" height="40">
+                <rect width="100" height="20"></rect>
+                <rect y="30" width="100" height="20"></rect>
+                <rect y="60" width="100" height="20"></rect>
+            </svg>
+        </div>
+        <div class="left sidenav">
+            <a href="about.html">About us</a>
+            <a href="#">Our clients</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="main-content">
+            <audio id="audio" autoplay>
+                <source src="slow_silent.mp3" type="audio/mpeg">
+            </audio>
+            <div class="card">
+                <ul>
+                    <li>Hi</li>
+                    <li>Second item</li>
+                    <li>Cheese</li>
+                </ul>
+            </div>
+            <div class="card">
+                <img alt="Painting of flower" src="images/Artwork1.jpg"/> 
+                Chalk and cheese the big cheese cream cheese. Fromage cauliflower cheese queso brie airedale feta queso gouda. Ricotta gouda bavarian bergkase halloumi croque monsieur smelly cheese rubber cheese manchego. Jarlsberg emmental rubber cheese fromage frais pepper jack cheese strings queso halloumi. Cream cheese.
+                <br/>
+                <button>See more</button>
+            </div>
+            <div class="card">
+                Chalk and cheese the big cheese cream cheese. Fromage cauliflower cheese queso brie airedale feta queso gouda. Ricotta gouda bavarian bergkase halloumi croque monsieur smelly cheese rubber cheese manchego. Jarlsberg emmental rubber cheese fromage frais pepper jack cheese strings queso halloumi. Cream cheese.
+                <br/>
+                <br/>
+                Cheese on toast the big cheese say cheese. Cream cheese mascarpone caerphilly mozzarella cheese slices bocconcini fromage cheesy feet. Edam jarlsberg bocconcini macaroni cheese chalk and cheese dolcelatte when the cheese comes out everybody's happy caerphilly. Melted cheese babybel.
+                <br/>
+                <br/>
+                Cheddar squirty cheese squirty cheese. Port-salut emmental cut the cheese say cheese parmesan chalk and cheese fromage cream cheese. Cauliflower cheese squirty cheese jarlsberg caerphilly roquefort cheese strings camembert de normandie manchego. Danish fontina boursin mozzarella airedale who moved my cheese st. agur blue cheese.
+                <br/>
+                <br/>
+                Dolcelatte cheese slices cheese triangles. Cheese and biscuits jarlsberg cheese on toast pepper jack babybel roquefort port-salut mozzarella. Pepper jack dolcelatte pepper jack airedale fromage frais cheese and biscuits say cheese cheesy grin. Feta say cheese chalk and cheese red leicester croque monsieur.
+                <br/>
+                <br/>
+                Lancashire cut the cheese stilton. Goat pepper jack everyone loves fromage frais feta babybel hard cheese pecorino. Monterey jack cheese slices cream cheese gouda babybel danish fontina feta queso. Goat who moved my cheese.
+            </div>
+            <div class="card">
+                <img src="images/kitty.jpg"/> 
+                Cheese on toast the big cheese say cheese. Cream cheese mascarpone caerphilly mozzarella cheese slices bocconcini fromage cheesy feet. Edam jarlsberg bocconcini macaroni cheese chalk and cheese dolcelatte when the cheese comes out everybody's happy caerphilly. Melted cheese babybel.
+                <br/>
+                <button>See more</button>
+            </div>
+        </div>
+        <div class="right sidenav"></div>
+        <div class="footer">
+            © Maura Walker 2022
+        </div>
+    </div>
 </body>
+
 </html>
