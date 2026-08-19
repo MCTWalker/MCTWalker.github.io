@@ -113,7 +113,7 @@ snake.draw = function() {
 function loop() {
   requestAnimationFrame(loop);
   // slow game loop to 15 fps instead of 60 - 60/15 = 4
-  if (++count < 4) {
+  if (++count < 8) {
     return;
   }
   count = 0;
